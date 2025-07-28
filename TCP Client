@@ -1,0 +1,16 @@
+import socket
+
+target_plc = "10.0.0.200"
+port = 5020
+sock = socket.socket(socket.AF_INET, socket.sock_stream) 
+sock.connect((target_plc, port))
+
+transaction_id = 
+protocol_id = 
+unit_id = 
+function_code = 
+start_address = 
+quantity = 
+
+request = transaction_id + protocol_id + unit_id + function_code + start_address + quantity
+sock.send(request)
